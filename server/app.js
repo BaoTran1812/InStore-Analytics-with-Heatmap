@@ -32,6 +32,7 @@ const facematchRoute = require('./routes/api/facematch');
 const confirmOnlineRoute = require('./routes/api/confirmOnline')
 const formRoute = require('./routes/api/form')
 const faceIDRoute = require('./routes/api/faceID')
+const fileUploadRoute = require('./routes/api/fileUpload')
 
 
 const user_model = require('./models/User.js');
@@ -98,6 +99,7 @@ app.use('/api/facematch', facematchRoute);
 app.use('/api/confirmOnline', confirmOnlineRoute)
 app.use('/api/form', formRoute)
 app.use('/api/faceID', faceIDRoute)
+app.use('/api/fileUpload', fileUploadRoute)
 
 app.use('/admin/queues', UI);
 errorManagement.handling.registerAndHandleAllErrors(app);

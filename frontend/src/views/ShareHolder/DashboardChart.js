@@ -486,6 +486,9 @@ class Dashboard extends Component {
       num_male: "",
       num_female: "",
       num_unknown: "",
+      bgColor1: "success",
+      bgColor2: "secondary",
+      bgColor3: "secondary",
       data_customer: [],
       storeName: [],
       heatMap: [],
@@ -1703,14 +1706,23 @@ class Dashboard extends Component {
       this.setState({ store1: true });
       this.setState({ store2: false });
       this.setState({ store3: false });
+      this.setState({bgColor1: "success"})
+      this.setState({bgColor2: "secondary"})
+      this.setState({bgColor3: "secondary"})
     } else if (event.target.name === "HCM408LTT") {
       this.setState({store2:true})
       this.setState({ store1: false });
       this.setState({ store3: false });
+      this.setState({bgColor2: "success"})
+      this.setState({bgColor1: "secondary"})
+      this.setState({bgColor3: "secondary"})
     } else if (event.target.name === "HCM1215D3T2") {
       this.setState({store3:true})
       this.setState({ store1: false });
       this.setState({ store2: false });
+      this.setState({bgColor3: "success"})
+      this.setState({bgColor1: "secondary"})
+      this.setState({bgColor2: "secondary"})
     }
   };
 
@@ -1813,7 +1825,7 @@ class Dashboard extends Component {
                         </DropdownMenu>
                       </Dropdown>
                     </ButtonGroup>
-                    <div className="text-value">22,643</div>
+                    <div className="text-value">506</div>
                     <div>Transactions</div>
                   </CardBody>
                   <div className="chart-wrapper" style={{ height: "70px" }}>
@@ -1851,7 +1863,7 @@ class Dashboard extends Component {
                         </DropdownMenu>
                       </ButtonDropdown>
                     </ButtonGroup>
-                    <div className="text-value">22,643</div>
+                    <div className="text-value">12.5%</div>
                     <div>Conversion Rate</div>
                   </CardBody>
                   <div
@@ -1927,14 +1939,14 @@ class Dashboard extends Component {
                         <div className="callout callout-danger">
                           <small className="text-muted">Transactions</small>
                           <br />
-                          <strong className="h4">22,643</strong>
+                          <strong className="h4">506</strong>
                         </div>
                       </Col>
                       <Col sm="4">
                         <div className="callout callout-warning">
                           <small className="text-muted">Conversion Rate</small>
                           <br />
-                          <strong className="h4">22,643</strong>
+                          <strong className="h4">12.5%</strong>
                         </div>
                       </Col>
                     </Row>
@@ -1968,7 +1980,7 @@ class Dashboard extends Component {
                   <div>StoreName</div>
                   <div className="buttons">
                     <Button
-                      color="primary"
+                      color= {this.state.bgColor1}
                       onClick={this.handleButton}
                       name="HCM382LBT"
                     >
@@ -1977,14 +1989,14 @@ class Dashboard extends Component {
                     
                     
                     <Button
-                      color="secondary"
+                      color= {this.state.bgColor2}
                       onClick={this.handleButton}
                       name="HCM408LTT"
                     >
                       HCM408LTT
                     </Button>{" "}
                     <Button
-                      color="success"
+                      color= {this.state.bgColor3}
                       onClick={this.handleButton}
                       name="HCM1215D3T2"
                     >

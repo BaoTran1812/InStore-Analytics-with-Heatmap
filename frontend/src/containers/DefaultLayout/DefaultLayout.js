@@ -33,7 +33,7 @@ class DefaultLayout extends Component {
           },
           {
             title: true,
-            name: "EKYC",
+            name: "In Store Analytics",
             wrapper: {
               // optional wrapper object
               element: "", // required valid HTML5 element tag
@@ -100,7 +100,7 @@ class DefaultLayout extends Component {
               <AppSidebarNav navConfig={this.state.items} {...this.props} />
             </Suspense>
             <AppSidebarFooter />
-            <AppSidebarMinimizer />
+            {/* <AppSidebarMinimizer /> */}
           </AppSidebar>
           <main className="main">
             <AppBreadcrumb appRoutes={routes} />
